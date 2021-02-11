@@ -10,7 +10,8 @@ ___
 
 # Website1016
 
-visit Github pages https://willthree123.github.io/10162042/Website1016/ "(What ever directory is the file)"
+visit Github pages https://willthree123.github.io/10162042/Website1016/ "(Where ever directory is the file)"
+
 example: https://willthree123.github.io/10162042/Website1016/Tutorial%20Exercise/SEHH1016_T2.html
 
 ## Tutorial Exercise
