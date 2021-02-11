@@ -25,18 +25,18 @@ int main(){
     cin >> year;
 
     // Perform conditional operator
-    cout << day << month << year;
     if (day>=32|| day<=0 || month>=13 || month <= 0 ){ 
         IncorrectDisplay();
-
     }
     else{
         if (year%4==0){     //This year is leap year
-            if (day >=30){
+            if (day >=30 && month==2){
                 IncorrectDisplay();
             }
+            else if(day>=29 && month ==2){
+                CorrectDisplay();
+            }
             else{
-
                 if( month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12){   //This month has 31 days
                     CorrectDisplay();
                 }
@@ -53,8 +53,8 @@ int main(){
             }
         }
         else{   //This year is not leap year
-            if(day >=29){
-                IncorrectDisplay();
+            if(day>=29 && month ==2){
+                CorrectDisplay();
             }
             else{
 
@@ -70,7 +70,6 @@ int main(){
                         CorrectDisplay();
                     }
                 }
-
             }
         }
     }
