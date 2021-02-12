@@ -4,26 +4,40 @@
 using namespace std;
 
 //Declare the necessary variables
-int counter = 4;
-int array[counter] = {12377, 723, 39, 43};
+int counter = 0;
+int storeArray [] = {};
 
 void print(){
-    for(int i = 0; i <= counter; i++){
-        
-        cout << array[i];
-        if( i % 10 == 0 ){
+    for(int i = 0; i < counter; i++){
+        if( i % 10 == 0 && i != 0){
             cout << "\n";
+        }
+        cout << setw(5) << storeArray [i];
+    }
+}
+
+void getPrimeNumber(){  
+    for(int k = 1; k <= 200; k++){
+        int tmp = k/2;  
+        bool primeSta;
+        primeSta = true;
+        for(int i = 2; i <= tmp; i++){  
+            if(k % i == 0){  
+                primeSta = false;    
+                break;  
+            }
+        }
+        if (primeSta == true && k != 1){
+            storeArray [counter] = k;
+            counter++;
         }
     }
 }
 
 int main(){
     cout << right;
-    
-    //Perform calculate
-
-    //Display the result with proper format
-    cout << baseValue << " to the power " << exponentValue << " is " << answer;
+    getPrimeNumber();
+    print();
      
     //Code indicates the end of program
     return 0;

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 //Declare the necessary variables
@@ -29,10 +30,11 @@ int main()
 
     // Perform calculate
     // Display the result with proper format
-    cout << "Product"<< "\t" << "Price" <<"\n" << "--------------------";
-    cout << "\n" << productName1 << "\t" << productPrice1;
-    cout << "\n"<< productName2 << "\t" << productPrice2;
-    cout << "\n"<< productName3 << "\t" << productPrice3;
+    cout << left;
+    cout << setw(15) << "Product" << setw(5) << "Price" <<"\n" << "--------------------";
+    cout << "\n" << setw(15) << productName1 << setw(5) << productPrice1;
+    cout << "\n" << setw(15) <<productName2 << setw(5) << productPrice2;
+    cout << "\n"<< setw(15) << productName3 << setw(5) << productPrice3;
         
     // Code indicates the end of program
     return 0;
