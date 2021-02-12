@@ -13,8 +13,7 @@ int main()
 
     // Perform calculate
     // Display the result with proper format
-    cout.setf(ios::fixed,ios::floatfield);
-    cout.precision(3); 
+    cout << fixed << setprecision(3); 
     cout << "x : " << x << "\n";
     cout << "x^2 : " << pow(x,2) << "\n";
     cout << "x^3 : " << pow(x,3) << "\n";
