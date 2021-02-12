@@ -28,7 +28,7 @@ int main(){
     //Perform calculate (Average)
     //Display the result with proper format
     answer = answer / counter;
-    cout << "Average of all positive values is " << answer <<endl;
+    cout << "Average of all positive values is " << answer;
      
     //Code indicates the end of program
     return 0;
