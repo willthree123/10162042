@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 //Declare the necessary variables
@@ -13,11 +14,10 @@ int main()
 
     // Perform calculate
     // Display the result with proper format
-    cout.setf(ios::fixed,ios::floatfield);
-    cout.precision(3); 
-    cout << "x : " << x << "\n";
-    cout << "x^2 : " << pow(x,2) << "\n";
-    cout << "x^3 : " << pow(x,3) << "\n";
+    cout << fixed << setprecision(3) << right; 
+    cout << setw(6) << "x : " << setw(10) << x << "\n";
+    cout << setw(6) << "x^2 : " << setw(10) << pow(x,2) << "\n";
+    cout << setw(6) << "x^3 : " << setw(10) << pow(x,3) << "\n";
     
     // Code indicates the end of program
     return 0;
