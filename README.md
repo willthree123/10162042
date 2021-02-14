@@ -2,9 +2,9 @@
 
 #### Tutorial Exercise
 
-##### 2021/2/11
+###### 2021/2/14
 
-- Uploaded T1, T2, T3(Q1-Q3)
+- Comment and Fixed bug of Tutorial 4 Questions
 
 ###### 2021/2/12
 
@@ -12,9 +12,9 @@
 - Tutorial 4 Q1-5
 - Refined T2 with setw()
 
-###### 2021/2/14
+###### 2021/2/11
 
-- Comment and Fixed bug of Tutorial 4 Questions
+- Uploaded T1, T2, T3(Q1-Q3)
 
 ___
 
