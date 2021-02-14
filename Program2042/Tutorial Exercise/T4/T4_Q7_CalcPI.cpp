@@ -29,7 +29,7 @@ void headerPrint(){
     secondeColumnPrint("-----------");
 }
 
-int calPI(){
+void calPI(){
     if( terms == 1 ){
         low = terms;
     }    
