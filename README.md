@@ -12,6 +12,10 @@
 - Tutorial 4 Q1-5
 - Refined T2 with setw()
 
+###### 2021/2/14
+
+- Comment and Fixed bug of Tutorial 4 Questions
+
 ___
 
 ## 🌎 Website1016
