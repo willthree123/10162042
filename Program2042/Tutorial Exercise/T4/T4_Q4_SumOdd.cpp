@@ -26,7 +26,7 @@ int main(){
     }
     
     //Perform calculate 
-    for (int i = smallerNum; i < largerNum; i ++){
+    for (int i = smallerNum; i <= largerNum; i ++){
         if(i%2==1){
             answer += i;
         }
