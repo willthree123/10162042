@@ -24,6 +24,9 @@ int main(){
         exponentValue = exponentValue * -1;
         answer = 1 / answer;
     }
+    else if(exponentValue==0){
+        answer = 1;
+    }
     else{
         for(int i = 1; i < exponentValue; i++){
             answer = answer * baseValue;
