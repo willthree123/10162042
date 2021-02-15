@@ -29,7 +29,7 @@ int main(){
         IncorrectDisplay();
     }
     else{
-        if (year%4==0){     //This year is leap year
+        if (( (year%4==0) && (year%100!=0) ) || (year%400==0)){     //This year is leap year
             if (day >=30 && month==2){
                 IncorrectDisplay();
             }
@@ -53,7 +53,10 @@ int main(){
             }
         }
         else{   //This year is not leap year
-            if(day>=29 && month ==2){
+            if(day>=29 && month==2){
+                IncorrectDisplay();
+            }
+            else if(day>=28 && month==2){
                 CorrectDisplay();
             }
             else{

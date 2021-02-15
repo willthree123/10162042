@@ -14,7 +14,7 @@ int main(){
     // Display the result with proper format
     cout << "Is " << year << " a leap year? ";
     
-    if (year%4==0){
+    if ( ( (year%4==0) && (year%100!=0) ) || (year%400==0) ){
         cout << "Yes";
     }
     else{
