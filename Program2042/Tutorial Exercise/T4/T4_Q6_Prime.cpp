@@ -21,7 +21,7 @@ void getPrimeNumber(){  //get all the prime number between 1 to 200
         int tmp = k/2;  //divide and store the current checking number 
         bool primeSta; //true if the number is a prime number
         primeSta = true; //assume its a prime number
-        for(int i = 2; i <= tmp; i++){   //check every number(2-200) to see if its the current number factor
+        for(int i = 2; i <= tmp; i++){   //for every
             if(k % i == 0){   
                 primeSta = false;    //if it has factor(s), then its not a prime number
                 break;  //break the current for loop
