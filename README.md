@@ -1,6 +1,9 @@
 ## 💻 Program2042
 
-#### Tutorial Exercise
+###### 2021/3/5
+
+- Uploaded T5 T6 (without comment)
+- Commented and Refined code in assignment one 
 
 ###### 2021/2/14
 
