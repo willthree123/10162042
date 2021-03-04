@@ -16,7 +16,7 @@ void showInfo()
 	cout << "Class     : 202B\n";
 }
 
-void Q1()
+void Q1() //Question 1
 {
     //Declare the necessary variables
     double inputX, inputY, centroidX, centroidY;
@@ -41,7 +41,7 @@ void Q1()
     // The end of question
 }
 
-void Q2()
+void Q2() //Question 2
 {
     //Declare the necessary variables
     double a, b, c, ansOne, ansTwo;
@@ -76,7 +76,7 @@ void Q2()
     // The end of question
 }
 
-void Q3()
+void Q3() //Question 3
 {
     //Declare the necessary variables
     int Amount;
@@ -97,7 +97,7 @@ void Q3()
     // The end of question
 }
 
-void Q4()
+void Q4() //Question 4
 {
 	//Declare the necessary variables
     int size, firstNumber, tmpNum, tmpSize;
