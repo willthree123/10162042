@@ -2,8 +2,23 @@
 using namespace std;
 
 // Function prototype is inserted here
+void printBinary(int n)
+{
+	int a[16], i;
+	for (i = 0; n > 0; i++)
+	{
+		a[i] = n % 2;
+		n = n / 2;
+	}
 
-int main(){
+	for (i = i - 1; i >= 0; i--)
+	{
+		cout << a[i];
+	}
+}
+
+int main()
+{
 
 	int num;
 

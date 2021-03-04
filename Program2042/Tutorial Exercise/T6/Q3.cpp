@@ -1,32 +1,18 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
-#include <string>
 using namespace std;
 
-double PI, tmpTermsValue;
-int terms = 1;
-int low, high;
-int runTime = 0;
-bool reverse; //true is +
-
-void calPI()
+double calcPI(int terms)
 {
-    if (terms == 1)
-    {
-        low = terms;
-    }
-    else
-    {
-        low = terms + 1;
-    }
-    terms = terms * 10;
-    high = terms;
-
+    int low = 1;
+    int high = terms;
+    double PI;
+    bool reverse; //true is +
     for (int i = low; i <= high; i++)
     {
         int divide = i * 2 - 1;
-        tmpTermsValue = 4.0 / divide;
+        double tmpTermsValue = 4.0 / divide;
         //cout << tmpTermsValue << " ";
         if (i == 1)
         {
@@ -47,15 +33,18 @@ void calPI()
             }
         }
     }
+    return PI;
 }
 
 int main()
 {
+    int input;
+    double result;
     cout << "How many terms for PI: ";
-    cin >> terms;
+    cin >> input;
     cout << fixed << setprecision(15);
-    calPI();
-    cout << PI;
+    result = calcPI(input);
+    cout << "PI with " << input << " terms is " << result;
     //Code indicates the end of program
     return 0;
 }
