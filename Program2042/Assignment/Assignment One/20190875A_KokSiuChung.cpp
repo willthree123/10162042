@@ -1,3 +1,4 @@
+
 // SEHH2042 Assignment 1
 // Program template file: A1Template.cpp
 // Do not modify the given codes
@@ -181,3 +182,4 @@ int main()
     return 0;
 }
 // END
+
