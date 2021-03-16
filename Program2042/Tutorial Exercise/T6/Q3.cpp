@@ -2,38 +2,22 @@
 #include <cmath>
 #include <iomanip>
 using namespace std;
+double PI;
 
 double calcPI(int terms)
 {
-    int low = 1;
-    int high = terms;
-    double PI;
-    bool reverse; //true is +
-    for (int i = low; i <= high; i++)
+    if (terms == 1)
     {
-        int divide = i * 2 - 1;
-        double tmpTermsValue = 4.0 / divide;
-        //cout << tmpTermsValue << " ";
-        if (i == 1)
-        {
-            PI = 4.0;
-            reverse = false;
-        }
-        else
-        {
-            if (reverse == false)
-            {
-                PI = PI - tmpTermsValue;
-                reverse = true;
-            }
-            else
-            {
-                PI = PI + tmpTermsValue;
-                reverse = false;
-            }
-        }
+        return 4.0 / 1;
     }
-    return PI;
+    else if (terms % 2 == 0)
+    {
+        return calcPI(terms - 1) - 4.0 / (terms * 2 - 1);
+    }
+    else
+    {
+        return calcPI(terms - 1) + 4.0 / (terms * 2 - 1);
+    }
 }
 
 int main()
