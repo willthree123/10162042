@@ -8,7 +8,10 @@ int c = 1;
 int main()
 {
     a += 10;
+    cout << a; 
     cout << a;
+    cout << "FYT is on9.";
     cout << b;
     cout << c;
+    cout << a << b << c << endl;
 }
