@@ -7,5 +7,6 @@ int main()
 {
     a += 10;
     cout << a; 
+    a += 100;
 
 }
