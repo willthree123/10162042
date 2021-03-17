@@ -7,5 +7,5 @@ int main()
 {
     a += 10;
     cout << a; 
-
+    cout <<a ; //by willfree
 }
