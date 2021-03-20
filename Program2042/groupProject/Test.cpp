@@ -5,12 +5,11 @@ int a; // fyt
 
 int main()
 {
+    int a = 6;
+    
     a += 10;
     cout << a; 
-<<<<<<< Updated upstream
-=======
+
     cout <<a ; //by willfree
-    
->>>>>>> Stashed changes
 
 }
