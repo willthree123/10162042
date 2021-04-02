@@ -1,10 +1,75 @@
 #include <iostream>
 #include <string>
-#include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
+//#include <fstream>
 using namespace std;
 unsigned int microsecond = 1000000; 
+
+class Cus_info {
+    public:
+    string name;
+    string id;
+    string location;
+};
+
+string cap(string change){
+    int s_length = 0;
+    string combine;
+    s_length = change.length();
+	char to_cap[s_length];
+	for (int i = 0; i < s_length; i++)
+	{
+		to_cap[i] = change[i];
+		if ((to_cap[i] >= char(97)) && (to_cap[i] <= char(122))){
+			to_cap[i] = char(int(to_cap[i]) - 32);
+		}
+		cout << to_cap[i];
+	}
+    for (int i = 0; i < s_length; i++)
+	{
+		combine = combine + to_cap[i];
+	}
+    return combine;
+}
+
+bool check_id(string change){
+	int s_length = 0;
+	s_length = change.length();
+	char check[s_length];
+	for (int i = 0; i < s_length; i++)
+	{
+		check[i] = change[i];
+		if (((check[i] < '0') || (check[i] > '9')) && ((check[i] < 'A') || (check[i] > 'Z')) && ((check[i] < 'a') || (check[i] > 'z')) ){
+			return 0;
+		}
+	}
+	return 1;
+	
+}
+
+void add(){
+    system("CLS");
+    Cus_info add_new;
+    bool check = 0;
+    cout << "This is the fuction of add assignment!"<< endl;
+    cout << "Please type in your username" << endl;
+    cout << "If this is not the fuction you want please type q instead : ";
+    cin.ignore();
+    getline(cin ,add_new.name );
+    if (add_new.name == "q"){
+		return;
+    }
+    do{
+        cout << "Please enter your passport ID, it is ok if you input lower case characters : ";
+        getline(cin , add_new.id);
+        cout << "You typed in inappropriate letters, please type in again";
+        check = check_id(add_new.id);
+    } while(!(check));
+    check = 0;
+    add_new.id = cap(add_new.id);
+
+}
+
 
 void show_intro(){
     system("CLS");
@@ -68,11 +133,11 @@ void menu(){
         else{
             user_input_char = user_input[0];
             switch (user_input_char) {
-                case '1': cout << "why"; break;
-                case '2': cout << "don't"; break;
-                case '3': cout << "show"; break;
-                case '4': cout << "this"; break;
-                case '5': cout << "shit"; break;
+                case '1': add(); usleep(microsecond); break;
+                case '2': cout << "don't"; usleep(microsecond); break;
+                case '3': cout << "show"; usleep(microsecond); break;
+                case '4': cout << "this"; usleep(microsecond); break;
+                case '5': cout << "shit";  usleep(microsecond);break;
                 case '6': cout << "Thank you for using this system";               
                                   usleep(2*microsecond);
                                   system("CLS");
