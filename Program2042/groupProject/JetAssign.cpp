@@ -12,6 +12,43 @@ class Cus_info {
     string location;
 };
 
+bool check_name(string b){
+    int s_length = 0;
+	s_length = b.length();
+	char check[s_length];
+	for (int i = 0; i < s_length; i++)
+	{
+		check[i] = b[i];
+		if (((check[i] < 'A') || (check[i] > 'Z')) && ((check[i] < 'a') || (check[i] > 'z')) && (!(check[i] == ' ')) ){
+			return 0;
+		}
+	}
+	return 1;
+}
+
+string cap_name(string change){
+    int s_length = 0;
+    string combine;
+    s_length = change.length();
+	char to_cap[s_length];
+	for (int i = 0; i < s_length; i++)
+	{
+		to_cap[i] = change[i];
+        if ((i == 0) || (change[i-1] == ' ')){
+            if ((to_cap[i] >= char(97)) && (to_cap[i] <= char(122))){
+                to_cap[i] = char(int(to_cap[i]) - 32);
+            }
+        }
+	}
+    for (int i = 0; i < s_length; i++)
+	{
+		combine = combine + to_cap[i];
+	}
+    return combine;
+}
+
+
+
 string cap(string change){
     int s_length = 0;
     string combine;
@@ -23,7 +60,6 @@ string cap(string change){
 		if ((to_cap[i] >= char(97)) && (to_cap[i] <= char(122))){
 			to_cap[i] = char(int(to_cap[i]) - 32);
 		}
-		cout << to_cap[i];
 	}
     for (int i = 0; i < s_length; i++)
 	{
@@ -52,22 +88,40 @@ void add(){
     Cus_info add_new;
     bool check = 0;
     cout << "This is the fuction of add assignment!"<< endl;
-    cout << "Please type in your username" << endl;
-    cout << "If this is not the fuction you want please type q instead : ";
-    cin.ignore();
-    getline(cin ,add_new.name );
-    if (add_new.name == "q"){
-		return;
-    }
+    do{
+        cout << "Please type in your username" << endl;
+        cout << "If this is not the fuction you want please type q instead : ";
+        cin.ignore();
+        getline(cin ,add_new.name );
+        if (add_new.name == "q"){
+            return;
+        }
+        check = check_name(add_new.name);
+        if(!(check_name(add_new.name))){
+            cout << "You typed in inappropriate letters, please type in again" << endl;
+        }
+    }while(!(check_name));
+    check = 0;
+    add_new.name = cap_name(add_new.name);
     do{
         cout << "Please enter your passport ID, it is ok if you input lower case characters : ";
         getline(cin , add_new.id);
-        cout << "You typed in inappropriate letters, please type in again";
         check = check_id(add_new.id);
+        if(!(check_id(add_new.id))){
+            cout << "You typed in inappropriate letters, please type in again" << endl;
+        }
     } while(!(check));
     check = 0;
     add_new.id = cap(add_new.id);
-
+    /*do
+    {
+        cout << "Please enter your passport ID, it is ok if you input lower case characters : ";
+        getline(cin , add_new.location);
+        
+    } while (!(check));*/
+    
+    cout << add_new.name << endl;
+    cout << add_new.id << endl;
 }
 
 
