@@ -83,6 +83,29 @@ bool check_id(string change){
 	
 }
 
+bool check_location(string b){
+    int s_length = 0;
+	s_length = b.length();
+	if((!((s_length == 2) || (s_length == 3)))){
+		return 0;
+	}
+	if ((b[s_length -1] < 'A') || (b[s_length -1] > 'F')){
+		return 0;
+	}
+	if(s_length == 2){
+		if ((b[0]<'1') || (b[0]>'9')){
+			return 0;
+		}
+	}
+	else{
+		if ((!(b[0]=='1'))||(b[1] < '0')||(b[1]>'3')){
+			return 0;
+		}
+	}
+	
+	return 1;
+}
+
 void add(){
     system("CLS");
     Cus_info add_new;
@@ -97,31 +120,37 @@ void add(){
             return;
         }
         check = check_name(add_new.name);
-        if(!(check_name(add_new.name))){
+        if(!(check)){
             cout << "You typed in inappropriate letters, please type in again" << endl;
         }
-    }while(!(check_name));
+    }while(!(check));
     check = 0;
     add_new.name = cap_name(add_new.name);
     do{
         cout << "Please enter your passport ID, it is ok if you input lower case characters : ";
         getline(cin , add_new.id);
         check = check_id(add_new.id);
-        if(!(check_id(add_new.id))){
+        if(!(check)){
             cout << "You typed in inappropriate letters, please type in again" << endl;
         }
     } while(!(check));
     check = 0;
     add_new.id = cap(add_new.id);
-    /*do
+    do
     {
-        cout << "Please enter your passport ID, it is ok if you input lower case characters : ";
+        cout << "Please enter your seat location, it is ok if you input lower case characters : ";
         getline(cin , add_new.location);
-        
-    } while (!(check));*/
+        add_new.location = cap(add_new.location);
+        check = check_location(add_new.location);
+        if(!(check)){
+            cout << "You does not type a valid seat location, please type again" << endl;
+        }
+    } while (!(check));
     
     cout << add_new.name << endl;
     cout << add_new.id << endl;
+    cout << add_new.location << endl;
+    usleep(microsecond);
 }
 
 
