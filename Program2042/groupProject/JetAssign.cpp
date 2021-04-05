@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 #include <unistd.h>
-//#include <fstream>
+#include <fstream>
+#include <vector>
 using namespace std;
 unsigned int microsecond = 1000000; 
 
@@ -11,6 +12,42 @@ class Cus_info {
     string id;
     string location;
 };
+
+vector<string> all_cus_info;
+
+void open_file(){
+	bool check;
+	fstream file;
+	file.open("store.txt");
+		check = file.is_open();
+	file.close();
+	if(!check){
+		file.open("store.txt");
+		file.close();
+	}
+}
+
+void read_file(){
+	fstream file;
+	string input;
+	all_cus_info.clear();
+	file.open("store.txt", fstream :: in);
+		while (getline(file,input)){
+			all_cus_info.push_back(input);
+		}
+		for(string temp : all_cus_info){
+			cout << temp << endl;
+		}
+}
+
+void write_file(string the_line){
+	fstream file;
+	string input;
+	bool check;
+	file.open("store.txt", fstream :: app);
+		file << the_line << endl;
+	file.close();
+}
 
 bool check_name(string b){
     int s_length = 0;
@@ -110,6 +147,9 @@ void add(){
     system("CLS");
     Cus_info add_new;
     bool check = 0;
+    string all;
+    open_file();
+    read_file();
     cout << "This is the fuction of add assignment!"<< endl;
     do{
         cout << "Please type in your username" << endl;
@@ -150,7 +190,14 @@ void add(){
     cout << add_new.name << endl;
     cout << add_new.id << endl;
     cout << add_new.location << endl;
-    usleep(microsecond);
+    all = add_new.name + "/" + add_new.id + "/" + add_new.location;
+    cout << all << endl;
+    write_file(all);
+    for (string temp : all_cus_info){
+        cout << temp << endl;
+    }
+
+    system("pause");
 }
 
 
