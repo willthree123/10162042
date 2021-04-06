@@ -143,6 +143,32 @@ bool check_location(string b){
 	return 1;
 }
 
+bool check_dup_id (string id){
+	int len;
+	char a , b;
+	bool check[id.length()];
+	for (string temp : all_cus_info ){
+		for(int i = 0; i < id.length() ; i++){
+			a = id[i];
+			b = temp[temp.length() - id.length() + i];
+			if (a == b){
+				check[i] = 1;
+			}
+			else {check[i] = 0;}
+		}
+		int count = 0;
+		for (int j = 0 ; j < id.length() ; j++){
+				if (check[j]){
+					count ++ ;
+				}
+			}
+		if (count == id.length()){
+			return 0 ;
+		}
+	}
+	return 1;
+}
+
 void add(){
     system("CLS");
     Cus_info add_new;
@@ -184,7 +210,14 @@ void add(){
         check = check_location(add_new.location);
         if(!(check)){
             cout << "You does not type a valid seat location, please type again" << endl;
+            goto skipcheck;
         }
+        check = check_dup_id(add_new.location);
+        if(!(check)){
+            cout << "The seat location has been taken, please type another seat location" << endl;
+        }
+    skipcheck:
+    cout << "";
     } while (!(check));
     
     cout << add_new.name << endl;
