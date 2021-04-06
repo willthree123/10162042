@@ -35,9 +35,6 @@ void read_file(){
 		while (getline(file,input)){
 			all_cus_info.push_back(input);
 		}
-		for(string temp : all_cus_info){
-			cout << temp << endl;
-		}
 }
 
 void write_file(string the_line){
@@ -169,6 +166,31 @@ bool check_dup_id (string id){
 	return 1;
 }
 
+void write_whole_file(){
+	fstream file;
+	string input;
+	bool check;
+	file.open("store.txt", fstream :: out);
+		for (string temp : all_cus_info){
+			file << temp << endl;
+		}
+	file.close();
+}
+
+int find(string pk){
+	int i = 0;
+	string::size_type position;
+	for (string temp : all_cus_info){
+		i++;
+		position = temp.find(pk);
+		if (!(position == temp.npos)){
+			return i;
+		}
+	}
+	return 1000;
+}
+
+
 void add(){
     system("CLS");
     Cus_info add_new;
@@ -219,20 +241,76 @@ void add(){
     skipcheck:
     cout << "";
     } while (!(check));
-    
-    cout << add_new.name << endl;
-    cout << add_new.id << endl;
-    cout << add_new.location << endl;
     all = add_new.name + "/" + add_new.id + "/" + add_new.location;
-    cout << all << endl;
     write_file(all);
-    for (string temp : all_cus_info){
-        cout << temp << endl;
-    }
+    cout << "input successful!"<< endl;
 
     system("pause");
 }
 
+void del(){
+    system("CLS");
+    Cus_info find_del;
+    bool check = 0;
+    string all;
+    string sure;
+    do{
+        del_start:cout << ""; 
+        do{
+            cout << "Please type in your username" << endl;
+            cout << "If this is not the fuction you want please type q instead : ";
+            cin.ignore();
+            getline(cin ,find_del.name );
+            if (find_del.name == "q"){
+                return;
+            }
+            check = check_name(find_del.name);
+            if(!(check)){
+                cout << "You typed in inappropriate letters, please type in again" << endl;
+            }
+        }while(!(check));
+        check = 0;
+        find_del.name = cap_name(find_del.name);
+        do{
+            cout << "Please enter your passport ID, it is ok if you input lower case characters : ";
+            getline(cin , find_del.id);
+            check = check_id(find_del.id);
+            if(!(check)){
+                cout << "You typed in inappropriate letters, please type in again" << endl;
+            }
+        } while(!(check));
+        find_del.id = cap(find_del.id);
+        all = find_del.name + "/" + find_del.id;
+        open_file();
+        read_file();
+        if(find(all)==1000){
+            cout << "Not found! Please check your input and type again" << endl;
+        }else {cout << "Found!" << endl;}
+    } while(find(all)==1000);
+	if (!(find(all)==1000)){
+        do{
+            cout << "Are you sure that you want to delete this record?"<< endl;
+            cout << "Type 1 for yes. Type 2 for no" << endl;
+            cin >> sure;
+            if (!(sure.length() == 1)){
+                cout << "1 layer"<< endl;
+                cout << "Invalid input"<<endl;
+            }else{
+                if((!(sure[0] == '1'))&&(!(sure[0] == '2'))){
+                    cout << "Invalid input"<<endl;
+                    cout << "2 layer"<< endl;
+                }
+            }
+        } while((!(sure.length() == 1))||((!(sure[0] == '1'))&&(!(sure[0] == '2'))));
+        if(sure[0] == '1'){
+            all_cus_info.erase(all_cus_info.begin()+find(all)-1);
+            write_whole_file();
+            read_file();
+            cout << all << " is successfully deleted"<<endl;
+        } else {goto del_start;}
+	}
+    system ("pause");
+}
 
 void show_intro(){
     system("CLS");
@@ -297,7 +375,7 @@ void menu(){
             user_input_char = user_input[0];
             switch (user_input_char) {
                 case '1': add(); usleep(microsecond); break;
-                case '2': cout << "don't"; usleep(microsecond); break;
+                case '2': del(); usleep(microsecond); break;
                 case '3': cout << "show"; usleep(microsecond); break;
                 case '4': cout << "this"; usleep(microsecond); break;
                 case '5': cout << "shit";  usleep(microsecond);break;
