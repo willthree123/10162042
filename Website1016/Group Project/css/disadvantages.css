@@ -64,8 +64,6 @@ html {
     box-shadow: 0px 0px 20px #ffffffaa;
 }
 
-.mi mark {
-    background-color: #FF6700;
-    color: #ffffff;
-    font-weight: 900;
+.Privacy li {
+    font-size: 1.2em;
 }

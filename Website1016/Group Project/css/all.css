@@ -27,8 +27,47 @@ h1 {
 mark {
     background-color: #239799;
     color: #ffffff;
+    font-weight: 900;
 }
 
 .darkFont {
     color: black;
+}
+
+.navbar .btnbg {
+    background-color: #2E4275;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #12121266;
+}
+
+.navbar .btnbg:hover {
+    background-color: #E18531;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #12121266;
+}
+
+.btnbg a {
+    text-decoration: none;
+}
+
+.navbar .btn {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.navbar .btn h2 {
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar {
+    background-color: #2FD3D8;
+    position: fixed;
+    z-index: ;
+}
+
+.footer h2 {
+    font-size: 1.5em;
 }
