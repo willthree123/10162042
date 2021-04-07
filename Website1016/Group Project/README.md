@@ -1,5 +1,32 @@
 ## 1016 Project
 
+##### 4.0.0 [2021/4/7 21:58]
+
+- Finished all pages with linking
+- However photos in some pages are missing
+
+- - -
+
+
+##### 3.0.1 [2021/4/7 20:33]
+
+- Created "Disadvantages.html" "disadvantages.css"
+- Finished "Disadvantages.html"
+- Finished all linking in "index.html"
+
+- - -
+
+##### 2.0.1 [2021/4/7 19:51]
+
+- Created "Example.html" "example.css"
+- Finished "Example.html"
+
+- - -
+
+##### 1.2.2 [2021/4/7 17:52]
+
+- Merged with "Timothy" branch
+
 ##### 1.2.1 [2021/4/7 17:48]
 
 - Created link between "v2.html" "Concepts.html" and "Comment_v2.html"
@@ -20,12 +47,6 @@
 ##### 1.0.2 [2021/4/4 00:49]
 
 - created new tab of the comment section
-
-- - -
-
-##### 1.0.2 [2021/4/4 00:49]
-
--created new tab of the comment section
 
 ##### 1.0.1 [2021/4/4 00:04]
 
