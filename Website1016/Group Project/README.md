@@ -1,10 +1,15 @@
 ## 1016 Project
 
+##### 1.2.1 [2021/4/7 17:48]
+
+- Created link between "v2.html" "Concepts.html" and "Comment_v2.html"
+
 ##### 1.2.0 [2021/4/7 16:39]
 
 - Created "Comment_v2.html"
 - Created "Comment_v2Border.html"
 - Finished "Comment_v2.html"
+- Merged with "Ricky" branch, "Concepts.html"
 
 - - -
 
