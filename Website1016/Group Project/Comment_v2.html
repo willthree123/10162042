@@ -1,0 +1,501 @@
+<html>
+
+<head>
+    <title>Comments - IT News</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="image/icon.svg">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/comment.css">
+
+</head>
+
+<body bgcolor="#5BA0E0">
+
+    <!-- Header -->
+    <a name="header"></a>
+    <table width="100%" class="navbar">
+        <tr height="40%">
+            <td>
+                <table>
+                    <tr>
+
+                        <!-- V_Spacer -->
+                        <td width="20px"></td>
+
+                        <td>
+                            <a href="">
+                                <a href="index.html">
+                                    <img src="image/1xIT_NEWS.png" height="100%">
+                                </a>
+                            </a>
+                        </td>
+
+                    </tr>
+                </table>
+            </td>
+            <td align="right">
+                <table>
+                    <tr>
+                        <td align="center" class="btnbg">
+                            <a href="Concepts.html">
+                                <table>
+                                    <tr>
+                                        <td class="btn">
+                                            <h2>
+                                                <font color=white>Concepts</font>
+                                            </h2>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a>
+                        </td>
+
+                        <!--H_spacer-->
+                        <td width="5px"></td>
+
+                        <td align="center" class="btnbg">
+                            <a href="Examples.html">
+                                <table>
+                                    <tr>
+                                        <td class="btn">
+                                            <h2>
+                                                <font color=white>Examples and Adavantages</font>
+                                            </h2>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a>
+                        </td>
+
+                        <!--H_spacer-->
+                        <td width="5px"></td>
+
+                        <td align="center" class="btnbg">
+                            <a href="Disadvantages.html">
+
+                                <table>
+                                    <tr>
+                                        <td class="btn">
+                                            <h2>
+                                                <font color=white>Disadvantages</font>
+                                            </h2>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                        </td>
+
+                        <!--H_spacer-->
+                        <td width="5px"></td>
+
+                        <td align="center" class="btnbg">
+                            <a href="Comment_v2.html">
+                                <table>
+                                    <tr>
+                                        <td class="btn">
+                                            <font color=white>
+                                                <h2>Comments</h2>
+                                            </font>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- V_Spacer -->
+    <table>
+        <tr height="50px">
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- Content -->
+    <table width="100%" class="content">
+        <tr>
+            <td align="center">
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <div class="div-1" width="100%" height="500px">
+                                <table width="1250px" align="center">
+                                    <tr>
+                                        <td>
+                                            <h1 align="LEFT">
+                                                <font color="white">Add New Comment
+                                            </h1>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <form name="form" ACTION="mailto:sc.chan@cpce-polyu.edu.hk" METHOD="POST" enctype="text/plain">
+                                    <TABLE style="border: 2px solid transparent;border-collapse: collapse ;" ALIGN="CENTER" WIDTH="800">
+
+                                        <TR>
+                                            <TD style="border: 2px solid transparent;border-collapse: collapse ;" ALIGN="right">
+                                                <p>
+                                                    <font color="white">Name:</font>
+                                                </p>
+                                            </TD>
+
+                                            <TD>
+                                                <INPUT TYPE="text" NAME="nickname" SIZE="43" REQUIRED>
+                                            </TD>
+                                        </TR>
+                                        <TR>
+                                            <TD style="border: 2px solid transparent;border-collapse: collapse ;" ALIGN="right">
+                                                <p>
+                                                    <font color="white">Age :</font>
+                                                </p>
+                                            </TD>
+                                            <TD>
+                                                <SELECT NAME="age" SIZE="1" REQUIRED>
+                                                    <OPTION VALUE="<=18"> 18 or below </OPTION>
+                                                    <OPTION VALUE="19-24"> 19 - 24</OPTION>
+                                                    <OPTION VALUE="25-30"> 25 - 30</OPTION>
+                                                    <OPTION VALUE="31-40"> 31 - 39</OPTION>
+                                                    <OPTION VALUE=">=40"> 40 or above</OPTION>
+                                                </SELECT>
+                                                <input type="radio" name="gender" value="M" required id="Mgender"><label for="Mgender">
+                                                    <font color="white">Male</font>
+                                                </label>
+                                                <input type="radio" name="gender" value="F" required id="Fgender"><label for="Fgender">
+                                                    <font color="white">Female</font>
+                                                </label>
+                                            </TD>
+                                        </TR>
+                                        <TR>
+                                            <TD style="border: 2px solid transparent;border-collapse: collapse ;" ALIGN="right">
+                                                <p>
+                                                    <font color="white">Email :</font>
+                                                </p>
+                                            </TD>
+                                            <TD>
+                                                <INPUT TYPE="email" NAME="email" SIZE="43" REQUIRED placeholder="example@example.com">
+                                            </TD>
+                                        </TR>
+                                        <TR>
+                                            <TD style="border: 2px solid transparent;border-collapse: collapse ;" ALIGN="right">
+                                                <p>
+                                                    <font color="white">Comment :</font>
+                                                </p>
+                                            </TD>
+                                            <TD>
+                                                <TEXTAREA NAME="comment" ROWS="6" COLS="45" REQUIRED placeholder="Please type your comment here..."></TEXTAREA>
+                                            </TD>
+                                        </TR>
+                                        <tr>
+
+                                            <!-- V_spacer -->
+                                            <td width="20px"></td>
+
+                                            <td>
+                                                <input type="checkbox" name="agree" required>
+                                                <font color="white" class="terms">Accept our
+                                                    <a href="https://policies.google.com/terms?hl=en-US" target="_blank">
+                                                        <font color="white">Terms of Use </font>
+                                                    </a>
+                                                </font>
+                                            </td>
+                                        </tr>
+                                        <TR>
+                                            <TD style="border: 2px solid transparent;border-collapse: collapse ;" COLSPAN="2" ALIGN="RIGHT">
+                                                <INPUT TYPE="reset" VALUE="Clear" class="Fbtn">
+                                                <INPUT TYPE="submit" VALUE="Submit" class="Fbtn">
+                                            </TD>
+
+                                        </TR>
+
+
+                                    </TABLE>
+                                </FORM>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- V_Spacer -->
+                <table>
+                    <tr height="150px">
+                        <td></td>
+                    </tr>
+                </table>
+
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <table width="1250px" align="center">
+                                <tr>
+                                    <td>
+                                        <h1 align="LEFT">
+                                            <font color="white">Comment By Users
+                                        </h1>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <HR>
+                        </td>
+                    </tr>
+                </table>
+                <table width="1140px" align="center">
+                    <tr>
+                        <td>
+                            <table width="100%" class="content cardbg" align="center" bgcolor="white">
+                                <tr>
+                                    <td>
+                                        <table width="100%" height="300px" class="card" style="border: 30px solid transparent;">
+                                            <tr height="100%">
+                                                <td>
+                                                    <h2 align="left">
+                                                        <i>
+                                                            <font color="black">Nice information.</font>
+                                                        </i>
+                                                    </h2>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <H4>
+                                                        <P ALIGN="RIGHT">
+                                                            <font color="#4d94ff">by Chris Wong 19-24</font>
+                                                    </H4>
+                                                    </P>
+                                                    <h4>
+                                                        <P ALIGN="RIGHT">
+                                                            <font color="grey">ssssddss@sdssss.com 6/4/2021 9:47pm
+                                                            </font>
+                                                        </P>
+                                                    </h4>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- H_Spacer -->
+                    <tr height="20px">
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <table width="100%" class="content cardbg" align="center" bgcolor="white">
+                                <tr>
+                                    <td>
+                                        <table width="100%" height="300px" class="card" style="border: 30px solid transparent;">
+                                            <tr height="100%">
+                                                <td>
+                                                    <h2 align="left">
+                                                        <i>
+                                                            <font color="black">Nice information.</font>
+                                                        </i>
+                                                    </h2>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <H4>
+                                                        <P ALIGN="RIGHT">
+                                                            <font color="#FF4D4D">by Chris Wong 25-30</font>
+                                                    </H4>
+                                                    </P>
+                                                    <h4>
+                                                        <P ALIGN="RIGHT">
+                                                            <font color="grey">abcdefg@goglemail.com 6/4/2021 9:47pm
+                                                            </font>
+                                                        </P>
+                                                    </h4>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- H_Spacer -->
+                    <tr height="20px">
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <table width="100%" class="content cardbg" align="center" bgcolor="white">
+                                <tr>
+                                    <td>
+                                        <table width="100%" height="300px" class="card" style="border: 30px solid transparent;">
+                                            <tr height="100%">
+                                                <td>
+                                                    <h2 align="left">
+                                                        <i>
+                                                            <font color="black">Nice information.</font>
+                                                        </i>
+                                                    </h2>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <H4>
+                                                        <P ALIGN="RIGHT">
+                                                            <font color="#4d94ff">by Chris Wong 19-24</font>
+                                                    </H4>
+                                                    </P>
+                                                    <h4>
+                                                        <P ALIGN="RIGHT">
+                                                            <font color="grey">ssssddss@sdssss.com 6/4/2021 9:47pm
+                                                            </font>
+                                                        </P>
+                                                    </h4>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- H_Spacer -->
+                    <tr height="20px">
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <table width="100%" class="content cardbg" align="center" bgcolor="white">
+                                <tr>
+                                    <td>
+                                        <table width="100%" height="300px" class="card" style="border: 30px solid transparent;">
+                                            <tr height="100%">
+                                                <td>
+                                                    <h2 align="left">
+                                                        <i>
+                                                            <font color="black">Nice information.</font>
+                                                        </i>
+                                                    </h2>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <H4>
+                                                        <P ALIGN="RIGHT">
+                                                            <font color="#4d94ff">by Chris Wong 19-24</font>
+                                                    </H4>
+                                                    </P>
+                                                    <h4>
+                                                        <P ALIGN="RIGHT">
+                                                            <font color="grey">ssssddss@sdssss.com 6/4/2021 9:47pm
+                                                            </font>
+                                                        </P>
+                                                    </h4>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- H_Spacer -->
+                    <tr height="20px">
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <table width="100%" class="content cardbg" align="center" bgcolor="white">
+                                <tr>
+                                    <td>
+                                        <table width="100%" height="300px" class="card" style="border: 30px solid transparent;">
+                                            <tr height="100%">
+                                                <td>
+                                                    <h2 align="left">
+                                                        <i>
+                                                            <font color="black">Nice information.</font>
+                                                        </i>
+                                                    </h2>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <H4>
+                                                        <P ALIGN="RIGHT">
+                                                            <font color="#4d94ff">by Chris Wong 19-24</font>
+                                                    </H4>
+                                                    </P>
+                                                    <h4>
+                                                        <P ALIGN="RIGHT">
+                                                            <font color="grey">ssssddss@sdssss.com 6/4/2021 9:47pm
+                                                            </font>
+                                                        </P>
+                                                    </h4>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!--V_spacer-->
+    <table>
+        <tr height="20px">
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- Footer -->
+    <table bgcolor="#002B36" width="100%" class="footer">
+
+        <!--V_spacer-->
+        <tr height="20px">
+            <td></td>
+        </tr>
+
+        <tr align="middle" height="100px">
+            <td>
+                <a href="#header">
+                    <img src="image/right-arrow.svg" width="50px">
+                    <h2>
+                        <font color="#009688"><u>Back to the top</u></font>
+                    </h2>
+                </a>
+            </td>
+        </tr>
+
+        <!--V_spacer-->
+        <tr height="10px">
+            <td></td>
+        </tr>
+
+        <tr align="left">
+            <td>
+                <p>
+                    <font color="white">Copyright © 2020 Internet Technology News. All Rights Reserved.
+                    </font>
+                </p>
+            </td>
+        </tr>
+    </table>
+    </table>
+
+</body>
+
+</html>
