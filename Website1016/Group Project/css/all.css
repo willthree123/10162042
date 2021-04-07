@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    //overflow: hidden;
+}
+
+p,
+h1,
+h2,
+h3,
+table,
+tr,
+td,
+img,
+ol,
+ul {
+    font-family: "Rajdhani", sans-serif;
+    color: white;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.darkFont {
+    color: black;
+}
