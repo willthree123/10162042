@@ -1,5 +1,12 @@
 ## 1016 Project
 
+##### 2.0.1 [2021/4/7 19:51]
+
+- Created "Example.html" "example.css"
+- Finished "Example.html"
+
+- - -
+
 ##### 1.2.2 [2021/4/7 17:52]
 
 - Merged with "Timothy" branch
@@ -24,12 +31,6 @@
 ##### 1.0.2 [2021/4/4 00:49]
 
 - created new tab of the comment section
-
-- - -
-
-##### 1.0.2 [2021/4/4 00:49]
-
--created new tab of the comment section
 
 ##### 1.0.1 [2021/4/4 00:04]
 

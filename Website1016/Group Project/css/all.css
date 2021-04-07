@@ -16,11 +16,17 @@ ol,
 ul {
     font-family: "Rajdhani", sans-serif;
     color: white;
+    line-height: 1.45em;
 }
 
 h1 {
     font-weight: 700;
     font-size: 3em;
+}
+
+mark {
+    background-color: #239799;
+    color: #ffffff;
 }
 
 .darkFont {
