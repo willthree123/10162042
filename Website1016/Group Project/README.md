@@ -1,5 +1,9 @@
 ## 1016 Project
 
+##### 1.2.2 [2021/4/7 17:52]
+
+- Merged with "Timothy" branch
+
 ##### 1.2.1 [2021/4/7 17:48]
 
 - Created link between "v2.html" "Concepts.html" and "Comment_v2.html"
