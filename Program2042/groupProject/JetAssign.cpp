@@ -4,7 +4,9 @@
 #include <fstream>
 #include <vector>
 using namespace std;
-unsigned int microsecond = 1000000; 
+unsigned int microsecond = 1000000;
+
+
 
 class Cus_info {
     public:
@@ -123,7 +125,7 @@ bool check_location(string b){
 	if((!((s_length == 2) || (s_length == 3)))){
 		return 0;
 	}
-	if ((b[s_length -1] < 'A') || (b[s_length -1] > 'F')){
+	if (((b[s_length -1] < 'A') || (b[s_length -1] > 'F'))&&((b[s_length -1] < 'a') || (b[s_length -1] > 'f'))){
 		return 0;
 	}
 	if(s_length == 2){
@@ -140,26 +142,26 @@ bool check_location(string b){
 	return 1;
 }
 
-bool check_dup_id (string id){
+bool check_dup_location (string location){
 	int len;
 	char a , b;
-	bool check[id.length()];
+	bool check[location.length()];
 	for (string temp : all_cus_info ){
-		for(int i = 0; i < id.length() ; i++){
-			a = id[i];
-			b = temp[temp.length() - id.length() + i];
+		for(int i = 0; i < location.length() ; i++){
+			a = location[i];
+			b = temp[temp.length() - location.length() + i];
 			if (a == b){
 				check[i] = 1;
 			}
 			else {check[i] = 0;}
 		}
 		int count = 0;
-		for (int j = 0 ; j < id.length() ; j++){
+		for (int j = 0 ; j < location.length() ; j++){
 				if (check[j]){
 					count ++ ;
 				}
 			}
-		if (count == id.length()){
+		if (count == location.length()){
 			return 0 ;
 		}
 	}
@@ -189,6 +191,21 @@ int find(string pk){
 	}
 	return 1000;
 }
+
+string breaking(string &a)
+{
+    int pos = 0;
+    pos = a.find("/"); // find / location
+    if (pos != string::npos)
+    {
+        string temp = a.substr(0, pos); // extract the useful string
+        a.erase(0, pos + 1); //update the string with the useful after used
+        return temp;
+    }
+    else 
+        return "error";
+}
+
 
 
 void add(){
@@ -234,7 +251,7 @@ void add(){
             cout << "You does not type a valid seat location, please type again" << endl;
             goto skipcheck;
         }
-        check = check_dup_id(add_new.location);
+        check = check_dup_location(add_new.location);
         if(!(check)){
             cout << "The seat location has been taken, please type another seat location" << endl;
         }
@@ -311,6 +328,68 @@ void del(){
 	}
     system ("pause");
 }
+void batch_addition()
+{
+    system("CLS");
+    vector <string> unsuccessful;
+    vector <string> successful;
+    string all;
+    string input;
+    open_file();
+    read_file();
+    cout << "Please enter the users' details as following Format:\nName/PassportID/Seat\n";
+    cin.ignore();
+    do{
+        bool now_success = 1;
+        getline(cin, input);
+        string a = input;
+        string name = breaking(a);
+        string id = breaking(a);
+        string location = a;
+        if( name == "error" || id == "error" || location == "error")
+            {
+                now_success = 0;
+            }
+        else{
+            if ((!check_name(name)) || (!check_id(id))|| (!check_location(location))){
+                    now_success = 0;
+            }
+            else{
+                    name = cap_name(name);
+                    id = cap(id);
+                    location = cap(location);
+                    if (check_dup_location(location)){
+                    a = name + "/" + id + "/" + location;
+                    }
+                    else{
+                        now_success = 0;
+                    }
+            }
+        }
+        if (now_success){
+            successful.push_back(a);
+        }
+        else{
+            unsuccessful.push_back(input);
+        }
+    }while(!((input.length() == 1) && (input[0] == '0')));
+    for (string temp : successful){
+       write_file(temp); 
+    }
+    cout << "Successful list:" << endl;
+    for (string temp : successful){
+        cout << temp << endl;
+    }
+    cout << "Unuccessful list:" << endl;
+    for (string temp : unsuccessful){
+        if (!((temp.length() == 1) && (temp[0] == '0'))){
+            cout << temp << endl;
+        }
+    }
+    system("pause");
+        
+
+}
 
 void show_intro(){
     system("CLS");
@@ -376,7 +455,7 @@ void menu(){
             switch (user_input_char) {
                 case '1': add(); usleep(microsecond); break;
                 case '2': del(); usleep(microsecond); break;
-                case '3': cout << "show"; usleep(microsecond); break;
+                case '3': batch_addition(); usleep(microsecond); break;
                 case '4': cout << "this"; usleep(microsecond); break;
                 case '5': cout << "shit";  usleep(microsecond);break;
                 case '6': cout << "Thank you for using this system";               
@@ -389,6 +468,7 @@ void menu(){
         }
     }while ((!(user_input.length()== 1))||(!(user_input_char=='6')));
 }
+
 
 int main(){ 
     show_intro();
