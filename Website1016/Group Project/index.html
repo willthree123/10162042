@@ -11,38 +11,26 @@
 <html>
 
 <head>
+    <!--setting title and icon of the web-->
+    <title>IoT - IT News</title>
+    <link rel="icon" href="image/icon.svg">
 
     <!--link css stylesheet and font-->>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/index.css" />
 
-    <!--setting title and icon of the web-->
-    <title>IoT - IT News</title>
-    <link rel="icon" href="image/icon.svg">
-
 </head>
 
-<body bgcolor="#1E3448" onload="play()">
+<body bgcolor="#1E3448">
 
-    <!--
-            Background Music
-        However, Google Chrome stop supporting autoplay since 2019.
-        No background music would play when using Google Chrome
-    
-    -->
-    <iframe src="image/bgsound.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-    </iframe>
-    <audio autoplay loop id="playAudio">
-        <source src="image/bgsound.mp3">
-    </audio>
+
 
     <div class="banner">
 
         <!--Background Video-->
-        <video autoplay muted loop>
-            <source src="image/bgflip.mp4" type="video/mp4" />
-        </video>
+
+        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/qARuBuJl3lg?%controls=0?&playlist=qARuBuJl3lg&loop=1&version=3&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
 
         <!--Main Body-->
         <div class="content">
@@ -127,20 +115,6 @@
             </table>
         </div>
     </div>
-
-    <!--set background music to 50%-->
-    <script>
-        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-        var vid = document.getElementById("iframAudio");
-        vid.volume = 0.5;
-        var vid1 = document.getElementById("playAudio");
-        vid1.volume = 0.5;
-        if (!isChrome) {
-            $('#iframeAudio').remove()
-        } else {
-            $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
-        }
-    </script>
 
 </body>
 
