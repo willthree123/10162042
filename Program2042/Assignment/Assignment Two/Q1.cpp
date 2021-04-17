@@ -17,10 +17,7 @@ int main()
         sum += min;
         count++;
     }
-    if (m > max || m < min)
-    {
-        cout <<"No number in range";
-    }
+
     else
     {
         cout << setprecision(2) << fixed;

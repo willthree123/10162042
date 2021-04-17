@@ -5,7 +5,6 @@ const double PI = 3.141592654;
 // (c) Prototypes of the two functions
 
 double triangle(double a, double b, double c){
-    double answer=0;
     cout<< sin(c)<<" ";
     return (0.5*a*b);
 }
