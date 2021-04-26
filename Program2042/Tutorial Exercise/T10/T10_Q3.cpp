@@ -2,7 +2,7 @@
 using namespace std;
 
 void printArray(const int[], int);
-void multiplyArray(int *,const int, int);
+void multiplyArray(int *, const int, int);
 
 int main()
 {
@@ -15,8 +15,7 @@ int main()
 
 	// Function call on multiplyArray
 	// Insert your codes here
-	int n = 3;
-	multiplyArray(c, arraySize, n);
+	multiplyArray(c, arraySize, 3);
 
 	cout << "After multiplyArray, array is: ";
 	printArray(c, arraySize);
@@ -35,11 +34,10 @@ void printArray(const int a[], int size)
 
 // Function definition of multiplyArray
 // Insert your codes here
-void multiplyArray(int *aPtr, const int k, int x)
+void multiplyArray(int *const a, int size, int n)
 {
-	for (int i = 0; i < k; i++)
+	for (int i = 0; i < size; i++)
 	{
-		*aPtr *= x;
-		aPtr++;
+		*(a + i) = *(a + i) * n;
 	}
 }

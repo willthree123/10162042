@@ -20,7 +20,6 @@ int main()
     }
 
     // Print the buffer content
-    cout << "buffer is:" << endl;
     cout << buffer;
 
     // Show the length of buffer, using strlen()
