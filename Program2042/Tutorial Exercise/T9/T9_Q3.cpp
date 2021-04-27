@@ -11,7 +11,13 @@ int main(){
 	
 	// Put strings in msgs into buffer
 	// Your codes should be inserted here.
-	
+	strcpy(buffer, "");
+	for (int i = 0; i < 10; i++)
+    {
+        strcat(buffer, msgs[i]);
+        strcat(buffer, "\n");
+    }
+
 	// Print the buffer content
 	cout << "buffer is:" << endl;
 	cout << buffer;
