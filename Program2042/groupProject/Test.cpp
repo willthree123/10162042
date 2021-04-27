@@ -68,4 +68,7 @@ void add(){
 
 int main(){
 	add();
+using namespace std;    // std::cout, std::cin
+int a; // fyt
+
 }
